@@ -7,19 +7,22 @@ import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects/Projects';
 import GlobalStyles from './components/styles/Global';
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
     return (
-        <ThemeProvider theme={theme}>
-            <>
-                <GlobalStyles />
-                <Navbar />
-                <Home />
-                <Projects />
-                <About />
-                <Footer />
-            </>
-        </ThemeProvider>
+        <Router>
+            <ThemeProvider theme={theme}>
+                <>
+                    <GlobalStyles />
+                    <Navbar />
+                    <Home />
+                    <Projects />
+                    <About />
+                    <Footer />
+                </>
+            </ThemeProvider>
+        </Router>
     )
 }
 

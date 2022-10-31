@@ -6,12 +6,17 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    html{
+        scroll-behavior: smooth;
+    }
+
+
     body {
         font-size: 100%;
         font-family: ${({ theme }) => theme.fonts.montserrat}
     }
     img {
-        width: 100%;
+        min-width: 100%;
         object-fit: cover;
     }
     li {
@@ -20,6 +25,15 @@ const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+    }
+    section{
+        height: 100vh;
+    }
+    section h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 100vh;
     }
 `;
 
