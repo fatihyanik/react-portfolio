@@ -29,12 +29,6 @@ const GlobalStyles = createGlobalStyle`
     section{
         height: 100vh;
     }
-    section h1{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 100vh;
-    }
 `;
 
 export default GlobalStyles;

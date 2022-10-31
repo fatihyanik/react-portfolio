@@ -43,7 +43,7 @@ export const NavList = styled.li``;
 export const StyledNavLinks = styled(NavLink)`
   font-size: 12px;
   letter-spacing: 1.5px;
-  color: gray;
+  color: ${({ theme }) => theme.color.lightGray};
   transition: 0.3s ease;
   text-transform: uppercase;
   position: relative;
@@ -58,7 +58,7 @@ export const StyledNavLinks = styled(NavLink)`
     width: 0;
     transform: scaleX(1);
     height: 1px;
-    background: ${({ theme }) => theme.backgroundColor.orange};
+    background: ${({ theme }) => theme.backgroundColor.lightBlue};
     transition: 0.3s ease-in-out;
   }
   &:hover::after {
@@ -73,7 +73,7 @@ export const StyledNavLinks = styled(NavLink)`
     width: 100%;
     transform: scaleX(1);
     height: 1px;
-    background: ${({ theme }) => theme.backgroundColor.orange};
+    background: ${({ theme }) => theme.backgroundColor.lightBlue};
     transition: 0.3s ease-in-out;
   }
 `;
@@ -127,7 +127,7 @@ export const StyledCTA = styled.a`
   }
   &::before {
     content: "";
-    background: ${({ theme }) => theme.backgroundColor.orange};
+    background: ${({ theme }) => theme.backgroundColor.lightBlue};
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
     transform-origin: 100% 50%;
   }
