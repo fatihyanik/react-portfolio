@@ -1,6 +1,7 @@
 export const theme = {
   fonts: {
     montserrat: "'Montserrat', sans-serif",
+    cardo: "'Cardo', serif",
   },
   backgroundColor: {
     dark: "#0d0e0e",
@@ -9,8 +10,11 @@ export const theme = {
     darkGray: "#111",
   },
   color: {
+    dark: "#000000",
+    darkGray: "#262637",
     lightGray: "#aaa",
     light: "#fff",
+    link: "#4353ff",
   },
   CTA: {
     primary: "#e64e04",

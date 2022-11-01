@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import {
   Line,
@@ -12,9 +11,11 @@ import {
 } from "../styles/Navbar.styled";
 import logo from "../../assets/logo.svg";
 import { animateScroll as scroll } from "react-scroll";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const [stickyNav, setStickyNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   // Height
   const stickyNavFunction = () => {
     if (window.scrollY >= 500) {
@@ -23,11 +24,15 @@ const Navbar = () => {
       setStickyNav(false);
     }
   };
-
   window.addEventListener("scroll", stickyNavFunction);
 
   const toTop = () => {
     scroll.scrollToTop({ delay: 0, duration: 0 });
+  };
+
+  // mobile toggle
+  const toggle = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -53,10 +58,6 @@ const Navbar = () => {
         <NavList>
           <StyledNavLinks
             to='projects'
-            smooth={true}
-            duration={0}
-            delay={0}
-            spy={true}
             spyThrottle={0}
             exact='true'
             offset={-50}
@@ -99,13 +100,15 @@ const Navbar = () => {
           </span>
         </span>
       </StyledCTA>
-      <Menu>
+
+      <Menu onClick={toggle}>
         <Line width='1.5rem' />
         <Line />
         <Line width='1.5rem' ml='0.5rem' />
       </Menu>
+
+      <MobileMenu isOpen={isOpen} toggle={toggle}></MobileMenu>
     </StyledNavbar>
   );
 };
-
 export default Navbar;

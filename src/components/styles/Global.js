@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
         color: inherit;
     }
     section{
-        height: 100vh;
+        padding: 6.6125rem 5rem 7.6125rem 5rem;
     }
 `;
 
