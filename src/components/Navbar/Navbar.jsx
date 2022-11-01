@@ -79,6 +79,20 @@ const Navbar = () => {
             About
           </StyledNavLinks>
         </NavList>
+        <NavList>
+          <StyledNavLinks
+            to="playground"
+            smooth={true}
+            duration={0}
+            delay={0}
+            spy={true}
+            spyThrottle={0}
+            exact="true"
+            offset={-85.26}
+          >
+            Playground
+          </StyledNavLinks>
+        </NavList>
       </NavMenuList>
       <StyledCTA
         href='mailto:fatihyanik07@gmail.com '
