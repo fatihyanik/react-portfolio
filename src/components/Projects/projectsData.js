@@ -5,6 +5,8 @@ import {
     project2Mobile,
     project3Laptop,
     project3Mobile,
+    project4Laptop,
+    project4Mobile,
   } from "./projectImages";
   
   export const projectData = [
@@ -31,5 +33,13 @@ import {
       title: "Notes App",
       codeLink: "https://github.com/fatihyanik/notesapp",
       liveLink: "https://fatih-note-app.netlify.app/",
+    },
+    {
+      id: 4,
+      image: project4Laptop,
+      transitionImage: project4Mobile,
+      title: "Turkey Parallax",
+      codeLink: "https://github.com/fatihyanik/TurkeyParallax",
+      liveLink: "https://turkeyparallax.netlify.app/",
     },
   ];
