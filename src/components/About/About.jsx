@@ -28,7 +28,7 @@ const About = () => {
         <AboutDetailsContainer>
           <StyledParagraph>
             My name is Murat Fatih Yanik. I
-            am a passionate front-end developer based in Philippines.
+            am a passionate front-end developer based in Germany.
           </StyledParagraph>
           <StyledParagraph>
             I love to design and create responsive websites or web apps from

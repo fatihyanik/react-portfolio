@@ -18,7 +18,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   // Height
   const stickyNavFunction = () => {
-    if (window.scrollY >= 500) {
+    if (window.scrollY >= 510) {
       setStickyNav(true);
     } else {
       setStickyNav(false);
@@ -50,7 +50,7 @@ const Navbar = () => {
             spy={true}
             spyThrottle={0}
             exact='true'
-            offset={-50}
+            offset={-85.26}
           >
             Home
           </StyledNavLinks>
@@ -60,7 +60,7 @@ const Navbar = () => {
             to='projects'
             spyThrottle={0}
             exact='true'
-            offset={-50}
+            offset={-85.26}
           >
             Projects
           </StyledNavLinks>
@@ -74,7 +74,7 @@ const Navbar = () => {
             spy={true}
             spyThrottle={0}
             exact='true'
-            offset={-50}
+            offset={-85.26}
           >
             About
           </StyledNavLinks>

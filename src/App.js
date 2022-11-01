@@ -8,6 +8,8 @@ import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects/Projects';
 import GlobalStyles from './components/styles/Global';
 import { BrowserRouter as Router } from "react-router-dom";
+import ParallaxComponent from "./components/Parallax/Parallax";
+import Technologies from "./components/Technologies/Technologies";
 
 function App() {
     return (
@@ -19,6 +21,8 @@ function App() {
                     <Home />
                     <Projects />
                     <About />
+                    <ParallaxComponent />
+                    <Technologies />
                     <Footer />
                 </>
             </ThemeProvider>
