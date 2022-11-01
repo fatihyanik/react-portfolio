@@ -8,12 +8,22 @@ export const StyledHome = styled.section`
   justify-content: center;
   padding: 0 8rem;
   height: 100vh;
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    align-items: center;
+    padding: 0;
+  }
 `;
 
 export const Name = styled.h2`
   font-size: 2.1875rem;
   position: relative;
   color: #fff9f9;
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: 2.1875rem;
+  }
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    font-size: 1.875rem;
+  }
 `;
 
 export const Title = styled.h1`
@@ -21,6 +31,16 @@ export const Title = styled.h1`
   font-weight: 700;
   margin: 0.5rem 0 1rem 0;
   color: #f7f7f7;
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    text-align: center;
+    font-size: 3.25rem;
+  }
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    font-size: 2.6875rem;
+  }
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+    font-size: 2.1875rem
+  }
 `;
 
 export const StyledButtonsContainer = styled.div`
@@ -52,6 +72,9 @@ export const Socials = styled.div`
   position: absolute;
   right: 5rem;
   bottom: 3rem;
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `;
 
 export const Social = styled.a`
@@ -60,7 +83,7 @@ export const Social = styled.a`
   position: relative;
   color: ${({ theme }) => theme.color.light};
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-0.3125rem);
     color: ${({ theme }) => theme.backgroundColor.orange};
   }
   &::after {
@@ -69,10 +92,10 @@ export const Social = styled.a`
     transform: translate(-50%, -50%);
     left: -1rem;
     top: 50%;
-    height: 8px;
-    width: 8px;
+    height: 0.5rem;
+    width: 0.5rem;
     background: ${({ theme }) => theme.backgroundColor.orange};
-    border-radius: 45px;
+    border-radius: 2.8125rem;
     opacity: 0;
     transition: all 0.3s;
   }
@@ -86,6 +109,9 @@ export const Quote = styled.span`
   right: 25%;
   bottom: 30%;
   color: #94929d;
-  font-size: 10px;
-  letter-spacing: 2px;
+  font-size: 0.625rem;
+  letter-spacing: 0.125rem;
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `;

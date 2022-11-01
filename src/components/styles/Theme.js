@@ -5,7 +5,7 @@ export const theme = {
   backgroundColor: {
     dark: "#0d0e0e",
     light: "#ffffff",
-    lightBlue: "#27eef5D6",
+    orange: "#27eef5D6",
     darkGray: "#111",
   },
   color: {
@@ -15,5 +15,10 @@ export const theme = {
   CTA: {
     primary: "#e64e04",
     secondary: "#4353ff",
+  },
+  breakpoints: {
+    md: "58.125rem",
+    sm: "48rem",
+    xs: "31.25rem",
   },
 };

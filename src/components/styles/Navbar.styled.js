@@ -23,6 +23,9 @@ export const StyledNavbar = styled.nav`
     background-color: #0b0b0c;
     height: 14vh;
     z-index: 999;
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 0 2.5rem;
+  }
   }
 `;
 
@@ -33,7 +36,7 @@ export const NavLogo = styled.img`
 export const NavMenuList = styled.ul`
   display: flex;
   list-style: none;
-  gap: 1.25rem;
+  gap: 1.5rem;
   flex: 1;
   margin-left: 8rem;
 `;
@@ -41,8 +44,8 @@ export const NavMenuList = styled.ul`
 export const NavList = styled.li``;
 
 export const StyledNavLinks = styled(NavLink)`
-  font-size: 12px;
-  letter-spacing: 1.5px;
+font-size: 0.75rem;
+letter-spacing: 0.09375rem;
   color: ${({ theme }) => theme.color.lightGray};
   transition: 0.3s ease;
   text-transform: uppercase;
@@ -57,8 +60,8 @@ export const StyledNavLinks = styled(NavLink)`
     left: 0;
     width: 0;
     transform: scaleX(1);
-    height: 1px;
-    background: ${({ theme }) => theme.backgroundColor.lightBlue};
+    height: 0.0625rem;
+    background: ${({ theme }) => theme.backgroundColor.orange};
     transition: 0.3s ease-in-out;
   }
   &:hover::after {
@@ -72,15 +75,15 @@ export const StyledNavLinks = styled(NavLink)`
     left: 0;
     width: 100%;
     transform: scaleX(1);
-    height: 1px;
-    background: ${({ theme }) => theme.backgroundColor.lightBlue};
+    height: 0.0625rem;
+    background: ${({ theme }) => theme.backgroundColor.orange};
     transition: 0.3s ease-in-out;
   }
 `;
 
 export const StyledCTA = styled.a`
-  font-size: 10px;
-  letter-spacing: 3px;
+  font-size: 0.625rem;
+  letter-spacing: 0.1875rem;
   font-weight: 500;
   transition: 0.3s ease;
   text-transform: uppercase;
@@ -127,7 +130,7 @@ export const StyledCTA = styled.a`
   }
   &::before {
     content: "";
-    background: ${({ theme }) => theme.backgroundColor.lightBlue};
+    background: ${({ theme }) => theme.backgroundColor.orange};
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
     transform-origin: 100% 50%;
   }
@@ -135,4 +138,25 @@ export const StyledCTA = styled.a`
     transform: scale3d(0, 1, 1);
     transform-origin: 0% 50%;
   }
+
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
+`;
+
+export const Menu = styled.div`
+  cursor: pointer;
+  display: none;
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: block;
+  }
+`;
+
+export const Line = styled.div`
+  height: 0.1125rem;
+  width: ${(props) => props.width || "2rem"};
+  background: ${({ theme }) => theme.color.light};
+  margin: 0.28125rem 0;
+  transition: 0.3s ease;
+  margin-left: ${(props) => props.ml || "0"};
 `;
