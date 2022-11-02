@@ -2,9 +2,9 @@ import React from "react";
 import {
   PlaygroundProjectContainer,
   StyledPlayground,
-} from "../styles/Playground.styled";
-import { SectionHeading, SectionTitle } from "../styles/SectionHeading";
-import { StyledParagraph } from "../styles/Typography.styled";
+} from "../../../src/components/styles/Playground.styled";
+import { SectionHeading, SectionTitle } from "../../../src/components/styles/SectionHeading";
+import { StyledParagraph } from "../../../src/components/styles/Typography.styled";
 import PlaygroundProjectComponent from "./PlaygroundProject";
 import { projectsData } from "./data";
 

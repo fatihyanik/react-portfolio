@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledButton } from "../styles/Button.styled";
+import { StyledButton } from "../../../src/components/styles/Button.styled";
 import {
   Name,
   StyledButtonsContainer,
@@ -10,10 +10,10 @@ import {
   Social,
   Socials,
   Quote,
-} from "../styles/Home.styled";
+} from "../../../src/components/styles/Home.styled";
 import "./style.css";
-import projectIcon from "../../assets/project-icon.svg";
-import aboutIcon from "../../assets/about-me.svg";
+import projectIcon from "../../assets/icons/project-icon.svg";
+import aboutIcon from "../../assets/icons/about-me.svg";
 import { IconContext } from "react-icons";
 import { GrLinkedinOption } from "react-icons/gr";
 import { GoMarkGithub } from "react-icons/go";
@@ -25,47 +25,47 @@ const Home = () => {
 
   return (
     <IconContext.Provider value={{ size: "1rem" }}>
-      <StyledHome id="home">
+      <StyledHome id='home'>
         <Name>Murat Fatih Yanik</Name>
-        <Title>Front-end Developer</Title>
+        <Title>Full Stack Web Developer</Title>
         <p>
-          I <span className="change-text"></span>{" "}
-          <span className="responsive">r</span>
-          <span className="responsive">e</span>
-          <span className="responsive">s</span>
-          <span className="responsive">p</span>
-          <span className="responsive">o</span>
-          <span className="responsive">n</span>
-          <span className="responsive">s</span>
-          <span className="responsive">i</span>
-          <span className="responsive">v</span>
-          <span className="responsive">e</span> websites.
+          I <span className='change-text'></span>{" "}
+          <span className='responsive'>r</span>
+          <span className='responsive'>e</span>
+          <span className='responsive'>s</span>
+          <span className='responsive'>p</span>
+          <span className='responsive'>o</span>
+          <span className='responsive'>n</span>
+          <span className='responsive'>s</span>
+          <span className='responsive'>i</span>
+          <span className='responsive'>v</span>
+          <span className='responsive'>e</span> websites.
         </p>
         <StyledButtonsContainer>
           <StyledButton
             icon={projectIcon}
-            to="projects"
+            to='projects'
             smooth={true}
             duration={0}
             delay={0}
             spy={true}
             spyThrottle={0}
-            exact="true"
+            exact='true'
             offset={-50}
           >
             <span>Projects</span>
           </StyledButton>
           <StyledButton
             icon={aboutIcon}
-            secondary="true"
-            content="B"
-            to="about"
+            secondary='true'
+            content='B'
+            to='about'
             smooth={true}
             duration={0}
             delay={0}
             spy={true}
             spyThrottle={0}
-            exact="true"
+            exact='true'
             offset={-50}
           >
             <span>About me</span>
@@ -81,23 +81,23 @@ const Home = () => {
         </Greeting>
         <Socials>
           <Social
-            href="mailto:fatihyanik07@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='mailto:fatihyanik07@gmail.com'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             <FaEnvelope />
           </Social>
           <Social
-            href="https://github.com/fatihyanik"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://github.com/fatihyanik'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             <GoMarkGithub />
           </Social>
           <Social
-            href="https:"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://www.linkedin.com/in/murat-fatih-yanik-2b091a230/'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             <GrLinkedinOption />
           </Social>

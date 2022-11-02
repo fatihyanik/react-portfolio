@@ -13,8 +13,8 @@ export const StyledNavbar = styled.nav`
   padding: 0 5rem;
   transition: 0.5s ease-in-out;
   z-index: 999;
-  background-color: ${({ theme }) => theme.backgroundColor.dark};
   color: #fff;
+
   &.sticky {
     position: fixed;
     left: 0;
@@ -23,14 +23,16 @@ export const StyledNavbar = styled.nav`
     background-color: ${({ theme }) => theme.backgroundColor.dark};
     height: 5.32875rem;
     z-index: 999;
+  }
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: 0 2.5rem;
-  }
   }
 `;
 
 export const NavLogo = styled.img`
   cursor: pointer;
+  color: red;
 `;
 
 export const NavMenuList = styled.ul`
@@ -39,19 +41,24 @@ export const NavMenuList = styled.ul`
   gap: 1.5rem;
   flex: 1;
   margin-left: 8rem;
+
+  @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
 `;
 
 export const NavList = styled.li``;
 
 export const StyledNavLinks = styled(NavLink)`
-font-size: 0.75rem;
-letter-spacing: 0.09375rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.09375rem;
   color: ${({ theme }) => theme.color.lightGray};
   transition: 0.3s ease;
   text-transform: uppercase;
   position: relative;
   font-weight: 500;
   cursor: pointer;
+
   &::after {
     content: "";
     position: absolute;
@@ -64,9 +71,15 @@ letter-spacing: 0.09375rem;
     background: ${({ theme }) => theme.backgroundColor.orange};
     transition: 0.3s ease-in-out;
   }
+
   &:hover::after {
     width: 100%;
   }
+
+  &.active {
+    color: ${({ theme }) => theme.color.light};
+  }
+
   &.active::after {
     content: "";
     position: absolute;
@@ -92,6 +105,7 @@ export const StyledCTA = styled.a`
   transition: 0.3s ease;
   position: relative;
   overflow: hidden;
+
   &::before,
   &::after {
     position: absolute;
@@ -100,26 +114,32 @@ export const StyledCTA = styled.a`
     width: 100%;
     height: 100%;
   }
+
   & span {
     display: flex;
     align-items: center;
     gap: 1rem;
     position: relative;
   }
+
   & > span {
     overflow: hidden;
   }
+
   & > span > span {
     overflow: hidden;
   }
+
   &:hover > span > span {
     animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
   }
+
   @keyframes MoveUpInitial {
     to {
       transform: translate3d(0, -105%, 0);
     }
   }
+
   @keyframes MoveUpEnd {
     from {
       transform: translate3d(0, 100%, 0);
@@ -128,12 +148,14 @@ export const StyledCTA = styled.a`
       transform: translate3d(0, 0, 0);
     }
   }
+
   &::before {
     content: "";
     background: ${({ theme }) => theme.backgroundColor.orange};
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
     transform-origin: 100% 50%;
   }
+
   &:hover::before {
     transform: scale3d(0, 1, 1);
     transform-origin: 0% 50%;
@@ -147,6 +169,7 @@ export const StyledCTA = styled.a`
 export const Menu = styled.div`
   cursor: pointer;
   display: none;
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
     display: block;
   }

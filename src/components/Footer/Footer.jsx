@@ -13,6 +13,7 @@ import {
   FooterSmallTitle,
   FooterSmallTitleWrapper,
   FooterSocials,
+  Small,
   StyledFooter,
 } from "../styles/Footer.styled";
 import { animateScroll as scroll } from "react-scroll";
@@ -22,6 +23,7 @@ const toTop = () => {
 };
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <StyledFooter>
       <FooterSmallTitleWrapper>
@@ -30,7 +32,7 @@ const Footer = () => {
 
       <FooterBigLinkContainer>
         <FooterBigLink
-          href="mailto:fatihyanik07@gmail.com"
+          href='mailto:fatihyanik07@gmail.com'
           data-hover="Let's talk!"
         >
           Need a developer?
@@ -39,37 +41,32 @@ const Footer = () => {
       <FooterContacts>
         <FooterContact>
           <ContactHeader>Call me</ContactHeader>
-          <ContactLink href="tel:+4917661663677">+4917661663677</ContactLink>
+          <ContactLink href='tel:+49 176 616 636 77'>
+            +49 176 616 636 77
+          </ContactLink>
         </FooterContact>
         <FooterContact>
           <ContactHeader>Social</ContactHeader>{" "}
           <FooterSocials>
             <ContactLink
-              href="https://github.com/fatihyanik"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://github.com/fatihyanik'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               GitHub
             </ContactLink>
             <ContactLink
-              href="https://www.linkedin.com/in/fatihyanik/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://www.linkedin.com/in/murat-fatih-yanik-2b091a230/'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               LinkedIn
-            </ContactLink>
-            <ContactLink
-              href="https://"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
             </ContactLink>
           </FooterSocials>
         </FooterContact>
         <FooterContact>
           <ContactHeader>Let's grab a coffee.</ContactHeader>
-          <ContactLink href="tel:+4917661663677">
+          <ContactLink href='tel:+49 176 616 636 77'>
             fatihyanik07@gmail.com
           </ContactLink>
         </FooterContact>
@@ -77,22 +74,23 @@ const Footer = () => {
 
       <FooterArrowLine>
         <FooterLine />
-        <ArrowToTop title="Back to Top" onClick={toTop}></ArrowToTop>
+        <ArrowToTop title='Back to Top' onClick={toTop}></ArrowToTop>
       </FooterArrowLine>
 
       <Copyright>
         <small>
-          &copy; Copyright
-          <span id="copyright">
-            <script>
-              document .getElementById("copyright")
-              .appendChild(document.createTextNode(new Date().getFullYear()));
-            </script>{" "}
-          </span>
-          , Murat Fatih Yanik
+          &copy; Copyright {year},{" "}
+          <Small
+            href='https://github.com/fatihyanik'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Murat Fatih Yanik
+          </Small>
         </small>
       </Copyright>
     </StyledFooter>
   );
 };
+
 export default Footer;

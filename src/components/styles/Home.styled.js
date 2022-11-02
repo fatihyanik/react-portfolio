@@ -8,6 +8,7 @@ export const StyledHome = styled.section`
   justify-content: center;
   padding: 0 8rem;
   height: 100vh;
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
     align-items: center;
     padding: 0;
@@ -18,9 +19,11 @@ export const Name = styled.h2`
   font-size: 2.1875rem;
   position: relative;
   color: #fff9f9;
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 2.1875rem;
   }
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.xs}) {
     font-size: 1.875rem;
   }
@@ -31,15 +34,18 @@ export const Title = styled.h1`
   font-weight: 700;
   margin: 0.5rem 0 1rem 0;
   color: #f7f7f7;
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
     text-align: center;
     font-size: 3.25rem;
   }
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     font-size: 2.6875rem;
   }
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    font-size: 2.1875rem
+    font-size: 2.1875rem;
   }
 `;
 
@@ -72,6 +78,7 @@ export const Socials = styled.div`
   position: absolute;
   right: 5rem;
   bottom: 3rem;
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
     display: none;
   }
@@ -82,10 +89,12 @@ export const Social = styled.a`
   transition: 0.3s ease;
   position: relative;
   color: ${({ theme }) => theme.color.light};
+
   &:hover {
     transform: translateY(-0.3125rem);
     color: ${({ theme }) => theme.backgroundColor.orange};
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -99,6 +108,7 @@ export const Social = styled.a`
     opacity: 0;
     transition: all 0.3s;
   }
+
   &:hover::after {
     opacity: 1;
   }
@@ -111,6 +121,7 @@ export const Quote = styled.span`
   color: #94929d;
   font-size: 0.625rem;
   letter-spacing: 0.125rem;
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.md}) {
     display: none;
   }

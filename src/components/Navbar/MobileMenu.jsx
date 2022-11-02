@@ -59,14 +59,14 @@ const MobileMenu = ({ isOpen, toggle }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Gmail
+          Gm
         </MobileSocial>
         <MobileSocial
           href="https://github.com/fatihyanik"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Github
+          Gb
         </MobileSocial>
 
         <MobileSocial
@@ -74,7 +74,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          LinkedIn
+          In
         </MobileSocial>
       </MobileSocials>
       <MobileQuote>try to best</MobileQuote>

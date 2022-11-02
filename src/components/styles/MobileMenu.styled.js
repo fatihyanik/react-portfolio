@@ -65,6 +65,7 @@ export const MobileButton = styled.a`
   transition: 0.3s ease;
   position: relative;
   overflow: hidden;
+
   &::before,
   &::after {
     position: absolute;
@@ -73,26 +74,32 @@ export const MobileButton = styled.a`
     width: 100%;
     height: 100%;
   }
+
   & span {
     display: flex;
     align-items: center;
     gap: 1rem;
     position: relative;
   }
+
   & > span {
     overflow: hidden;
   }
+
   & > span > span {
     overflow: hidden;
   }
+
   &:hover > span > span {
     animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
   }
+
   @keyframes MoveUpInitial {
     to {
       transform: translate3d(0, -105%, 0);
     }
   }
+
   @keyframes MoveUpEnd {
     from {
       transform: translate3d(0, 100%, 0);
@@ -101,12 +108,14 @@ export const MobileButton = styled.a`
       transform: translate3d(0, 0, 0);
     }
   }
+
   &::before {
     content: "";
     background: ${({ theme }) => theme.backgroundColor.orange};
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
     transform-origin: 100% 50%;
   }
+
   &:hover::before {
     transform: scale3d(0, 1, 1);
     transform-origin: 0% 50%;

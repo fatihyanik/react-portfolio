@@ -1,7 +1,7 @@
 import React from "react";
 import { Parallax } from "react-parallax";
 import parralaxImage from "../../assets/quote-background.jpg";
-import { ParallaxContainer, ParallaxText } from "../styles/Parallax.styled";
+import { ParallaxContainer, ParallaxText } from "../../../src/components/styles/Parallax.styled";
 
 const ParallaxComponent = () => {
   return (

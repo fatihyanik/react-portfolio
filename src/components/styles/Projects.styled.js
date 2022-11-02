@@ -80,9 +80,11 @@ export const ProjectCodeLink = styled.a`
   color: ${({ theme }) => theme.color.light};
   font-size: 14px;
   ${Flex}
+
   ${LinkName}::after {
     ${HoverStyle}
   }
+
   ${LinkName}:hover::after {
     width: 100%;
   }
@@ -95,9 +97,11 @@ export const ProjectLiveLink = styled.a`
   color: ${({ theme }) => theme.color.light};
   font-size: 14px;
   ${Flex}
+
   ${LinkName}::after {
     ${HoverStyle}
   }
+
   ${LinkName}:hover::after {
     width: 100%;
   }
@@ -114,6 +118,7 @@ export const ProjectCard = styled.article`
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+
   &::after {
     content: "";
     position: absolute;
@@ -121,17 +126,21 @@ export const ProjectCard = styled.article`
     background: rgb(13, 14, 14, 0.1);
     z-index: 2;
   }
+
   &:hover {
     box-shadow: 0 2px 15px rgba(13, 14, 14) 15%;
   }
+
   &:hover ${ProjectDetails} {
     transform: translateY(0);
     opacity: 1;
     pointer-events: all;
   }
+
   &:hover ${ProjectTransitionImage} {
     opacity: 1;
   }
+
   @media all and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     width: 25rem;
   }

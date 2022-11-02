@@ -11,7 +11,7 @@ import {
   ProjectLiveLink,
   ProjectTitle,
   ProjectTransitionImage,
-} from "../styles/Projects.styled";
+} from "../../../src/components/styles/Projects.styled";
 
 const ProjectCardComponent = ({
   image,
@@ -30,16 +30,16 @@ const ProjectCardComponent = ({
             <ProjectTitle>{title}</ProjectTitle>
             <ProjectCodeLink
               href={codeLink}
-              target='_blank'
-              rel='noopener noreferrer'
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <GoMarkGithub />
               <LinkName>Github Code</LinkName>
             </ProjectCodeLink>
             <ProjectLiveLink
               href={liveLink}
-              target='_blank'
-              rel='noopener noreferrer'
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <BiLinkExternal />
               <LinkName>Live</LinkName>
