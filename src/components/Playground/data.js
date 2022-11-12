@@ -1,15 +1,15 @@
-import dribble from "../../assets/playground/dribble.png";
+import coco from "../../assets/playground/coco.png";
 import random from "../../assets/playground/random.png";
-import countdown from "../../assets/playground/countdown.png";
+import rock from "../../assets/playground/rock.png";
 import awwwards from "../../assets/playground/awwwards.png";
 
 export const projectsData = [
   {
     id: 1,
-    projectName: "Dribble Homepage Clone",
-    liveLink: "https://dribble-clone.netlify.app/",
+    projectName: "Coco Donuts",
+    liveLink: "https://cocodonuts.vercel.app/",
     hasLink: true,
-    img: dribble,
+    img: coco,
   },
   {
     id: 2,
@@ -20,10 +20,10 @@ export const projectsData = [
   },
   {
     id: 3,
-    projectName: "New Year Countdown",
-    hasLink: false,
-    liveLink: "",
-    img: countdown,
+    projectName: "Rock Paper Scissors",
+    hasLink: true,
+    liveLink: "https://fatih-rock-paper-scissors.netlify.app/",
+    img: rock,
   },
   {
     id: 4,
