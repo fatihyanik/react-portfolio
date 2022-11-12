@@ -1,7 +1,7 @@
 import coco from "../../assets/playground/coco.png";
 import random from "../../assets/playground/random.png";
 import rock from "../../assets/playground/rock.png";
-import awwwards from "../../assets/playground/awwwards.png";
+import pet from "../../assets/playground/pet.png";
 
 export const projectsData = [
   {
@@ -27,9 +27,9 @@ export const projectsData = [
   },
   {
     id: 4,
-    projectName: "Awwwards Clone",
+    projectName: "Pettaker",
     hasLink: false,
     liveLink: "",
-    img: awwwards,
+    img: pet,
   },
 ];
